@@ -31,7 +31,9 @@ const Homepage = () => (
             Bachelors in Software Engineering, Florida Gulf Coast University
           </p>
           <button className="bg-white text-black px-6 py-3 rounded-full hover:bg-gray-200 transition duration-300">
-            LinkedIn Page
+            <a href="https://www.linkedin.com/in/niel-patel-359b62267/" target="_blank" rel="noopener noreferrer">
+              LinkedIn Page
+            </a>
           </button>
         </div>
       </div>

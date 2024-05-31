@@ -1,32 +1,32 @@
 import React from 'react';
 import Navigation from '../components/Navbar';
 import Image from 'next/image';
-import background from "./aboutme.jpg";
+import Aboutpage from "./myimage.jpeg";
 
-
-interface Experience {
-    title: string;
-    school: string;
-    location: string;
-    date: string;
-    description: string;
-}
-
-const About: React.FC = () => {
+const About = () => {
     return (
-        <div className="bg-cover bg-center min-h-screen" style={{backgroundImage: `url(${background.src})`}}>
-            <Navigation></Navigation>
-            <div className="container mx-auto py-8">
+        <div style={{ position: 'relative' }}>
+            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
+                <Image
+                    src={Aboutpage}
+                    alt="Homepage Background"
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="center"
+                    className="opacity-100"
+                />
+            </div>
+            <Navigation />
+            <div className="container mx-auto py-8 relative z-10">
                 <div className="grid grid-cols-3 gap-4 place-items-stretch">
                     <div className="col-span-1 mr-2 mt-2">
                         <div className="bg-white p-8 rounded-lg shadow-md">
-                            <h2 className="text-2xl font-bold mb-4">About Me</h2>
+                            <h2 className="text-2xl font-bold mb-4"></h2>
                             <div className="flex items-center justify-center mb-4">
                                 <Image src="/profile.jpg" alt="Profile Picture" width={200} height={200} className="rounded-full" />
                             </div>
                             <h3 className="text-lg font-bold">Niel Kishor Patel</h3>
-                            
-                            <p className="text-md text-gray-600">Bachelors,Software Engineering</p>
+                            <p className="text-md text-gray-600">Bachelors, Software Engineering</p>
                         </div>
                     </div>
                     <div className="col-span-2">
